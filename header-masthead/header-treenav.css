@@ -1,0 +1,326 @@
+/**
+ * Copyright (C) 2012 Cisco
+ *
+ * treenav.scss: Tree navigation in the header.
+ *
+ */
+/*  --------------------------------------------------
+:: grid.scss: 
+            Defines grid variables and mixins for use in _layouts.scss 
+            Defines all the breakpoints used everywhere
+-------------------------------------------------- */
+/*  --------------------------------------------------
+:: colors.scss: Cisco color palette.
+-------------------------------------------------- */
+/* to call a sprite, use: 
+background: 
+    sprite-url($sprites) 
+    sprite-position($sprites, [change to sprite name], 0px, 0px)
+    no-repeat;
+*/
+/* Use @include icons-sprite(<name_of_img>) to use sprite */
+/*  --------------------------------------------------
+:: _typography.scss: Shared type size variables.
+-------------------------------------------------- */
+/* line 450, ../sass/header-treenav.scss */
+.production-copy {
+  position: absolute;
+  z-index: 10000;
+  width: 100%;
+  bottom: 0px;
+  /*
+  .minwidth-medium {
+      display: none!important;
+  }
+  .maxwidth-small {
+      display: inline-block!important;
+  }
+  */
+}
+@media (min-width: 37.5em) {
+  /* line 450, ../sass/header-treenav.scss */
+  .production-copy {
+    width: 50%;
+    max-width: 320px;
+  }
+}
+/* line 461, ../sass/header-treenav.scss */
+.production-copy button, .production-copy input[type="search"]::-webkit-search-cancel-button,
+.production-copy input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+  color: #525252;
+}
+/* line 469, ../sass/header-treenav.scss */
+.production-copy .fw-treenav {
+  border-top: 1px solid #ccc;
+  display: none;
+  position: absolute;
+  height: auto;
+  list-style-type: none;
+  overflow-y: visible;
+  margin: 0;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  background-color: #fff;
+}
+/* line 484, ../sass/header-treenav.scss */
+.production-copy .fw-treenav ul,
+.production-copy .fw-treenav li,
+.production-copy .fw-treenav div {
+  margin: 0;
+  width: 100%;
+  padding: 0;
+}
+/* line 493, ../sass/header-treenav.scss */
+.production-copy .fw-treenav li,
+.production-copy .fw-treenav .treenav-secondary li,
+.production-copy .fw-treenav .treenav-back {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  clear: left;
+}
+/* line 501, ../sass/header-treenav.scss */
+.production-copy .fw-treenav a,
+.production-copy .fw-treenav button,
+.production-copy .fw-treenav .treenav-secondary li a,
+.production-copy .fw-treenav .treenav-secondary li button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  text-decoration: none;
+  color: #222;
+  font-family: Arial Regular,Arial,Helvetica,sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-align: left;
+  text-decoration: none;
+  text-shadow: white 0 1px 1px;
+  padding: 13px 10px;
+  margin: 0;
+}
+/* line 525, ../sass/header-treenav.scss */
+.production-copy .fw-treenav button span:first-child {
+  position: relative;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px;
+  padding: 0;
+  border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) white;
+  border-width: 8px 0 8px 8px;
+  border-right-style: inset;
+  position: absolute;
+  right: 8px;
+  display: inline-block;
+  z-index: 1;
+}
+/* line 543, ../sass/header-treenav.scss */
+.production-copy .fw-treenav button span:first-child + span {
+  position: relative;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px;
+  padding: 0;
+  border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) #525252;
+  border-width: 8px 0 8px 8px;
+  border-right-style: inset;
+  position: absolute;
+  right: 6px;
+  display: inline-block;
+}
+/* line 561, ../sass/header-treenav.scss */
+.production-copy .fw-treenav button.tn-group {
+  background: white;
+}
+/* line 565, ../sass/header-treenav.scss */
+.production-copy .fw-treenav li.active button.tn-group {
+  background-color: #eeeeee;
+}
+/* line 568, ../sass/header-treenav.scss */
+.production-copy .fw-treenav li.active button.tn-group span:first-child {
+  border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) #eeeeee;
+}
+/* line 575, ../sass/header-treenav.scss */
+.production-copy .fw-treenav .tn-actions {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 0;
+  height: 41px;
+}
+/* line 580, ../sass/header-treenav.scss */
+.production-copy .fw-treenav .tn-actions li {
+  width: 32%;
+  max-width: 150px;
+  height: auto;
+  border: 0;
+  float: left;
+  margin-left: 1%;
+  clear: none;
+}
+/* line 589, ../sass/header-treenav.scss */
+.production-copy .fw-treenav .tn-actions li a {
+  font-size: 14px;
+  border: 1px solid #ccc;
+  padding: 4px;
+  border-radius: 4px;
+  margin: 6px 1%;
+  padding: 5px 0;
+  width: auto;
+  text-align: center;
+}
+/* line 600, ../sass/header-treenav.scss */
+.production-copy .fw-treenav .tn-actions li.deactivated a {
+  color: #999999;
+}
+/* line 605, ../sass/header-treenav.scss */
+.production-copy .fw-treenav .tn-mycisco {
+  border-bottom: 1px solid #ccc;
+}
+/* line 608, ../sass/header-treenav.scss */
+.production-copy .fw-treenav .tn-language {
+  border-bottom: 3px #ccc solid;
+}
+/* line 615, ../sass/header-treenav.scss */
+.production-copy .fw-treenav .treenav-secondary {
+  display: none;
+  border-top: 1px solid #ccc;
+  background-color: #f6f6f6;
+  left: 100%;
+  position: absolute;
+  top: -1px;
+  -webkit-box-shadow: inset 12px 0 10px -10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 12px 0 10px -10px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: inset 12px 0 10px -10px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 12px 0 10px -10px rgba(0, 0, 0, 0.2);
+  border-left: 1px solid #ccc;
+}
+/* line 631, ../sass/header-treenav.scss */
+.production-copy .fw-treenav .treenav-secondary.active {
+  display: block;
+}
+/* line 635, ../sass/header-treenav.scss */
+.production-copy .fw-treenav .treenav-secondary li div {
+  height: 100%;
+  width: 100%;
+  background-color: #d8d8d8;
+  padding: 7px 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 13px;
+  font-weight: bold;
+}
+/* line 649, ../sass/header-treenav.scss */
+.production-copy .fw-treenav .treenav-secondary li.treenav-back {
+  -webkit-box-shadow: 0 2px 5px rgba(100, 100, 100, 0.1);
+  -moz-box-shadow: 0 2px 5px rgba(100, 100, 100, 0.1);
+  -o-box-shadow: 0 2px 5px rgba(100, 100, 100, 0.1);
+  box-shadow: 0 2px 5px rgba(100, 100, 100, 0.1);
+  top: 0px;
+  height: 41px;
+  background-color: white;
+  z-index: 503;
+}
+/* line 661, ../sass/header-treenav.scss */
+.production-copy .fw-treenav .treenav-secondary li.treenav-back span {
+  width: auto;
+  display: inline-block;
+  padding: 10px 0 10px 10px;
+  font-size: 14px;
+}
+/* line 668, ../sass/header-treenav.scss */
+.production-copy .fw-treenav .treenav-secondary li.treenav-back span:first-child {
+  position: relative;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px;
+  padding: 0;
+  border-color: rgba(255, 255, 255, 0) white rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+  border-width: 8px 8px 8px 0;
+  border-left-style: inset;
+  right: -4px;
+  display: inline-block;
+  z-index: 1;
+}
+/* line 684, ../sass/header-treenav.scss */
+.production-copy .fw-treenav .treenav-secondary li.treenav-back span:first-child + span {
+  position: relative;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px;
+  padding: 0;
+  border-color: rgba(255, 255, 255, 0) #525252 rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+  border-width: 8px 8px 8px 0;
+  border-left-style: inset;
+  right: 6px;
+  display: inline-block;
+}
+/* line 700, ../sass/header-treenav.scss */
+.production-copy .fw-treenav .treenav-secondary li.treenav-back button {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  height: inherit;
+  width: 42px;
+  display: inline-block;
+  border-right: 1px solid #ccc;
+}
+/* line 711, ../sass/header-treenav.scss */
+.production-copy .fw-treenav .locked {
+  background: url("http://www.cisco.com/web/fw/i/responsive-sprite.png") -40px -310px no-repeat;
+  background-color: #f6f6f6;
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+}
+
+/* line 729, ../sass/header-treenav.scss */
+.treenav-active .production-copy .fw-treenav {
+  display: block;
+}
+
+/*
+.fw-content {
+    //could be necessary for a block-friendly fader layer
+    position:relative;
+}
+*/
+/* line 739, ../sass/header-treenav.scss */
+.fader {
+  display: none;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+/* line 743, ../sass/header-treenav.scss */
+.fader.active {
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  z-index: 11;
+  background: rgba(0, 0, 0, 0.4);
+  height: 500%;
+  width: 100%;
+}
