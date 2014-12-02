@@ -1,0 +1,59 @@
+#header_section{
+	clear:right;
+}
+
+ul{
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+
+a{
+	text-decoration:none;
+}
+
+.hidden{
+	display: none;
+}
+
+#primarynav_outer{
+	height:57px;
+}
+
+ul.navmenu{
+	height:inherit;
+}
+
+ul.navmenu li{
+	display:inline-block;
+	float:left;
+}
+
+ul.navmenu li a{
+	display: block;
+	width: 150px;
+	height: 40px;
+	padding-top:15px;
+	border: 1px solid #000;
+	text-align:center;
+}
+
+#navdrawer{
+	height:350px;
+	width:100%;
+	float:left;
+}
+
+.navcolumn{
+	width:inherit;
+	height:inherit;
+	background-color:#999999;
+}
+
+.navlist{
+	margin:0;
+}
+
+.navcolumn{
+	float:left;
+}

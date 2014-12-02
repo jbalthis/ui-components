@@ -1,127 +1,112 @@
-<html class="no-js">
+<!DOCTYPE html>
+<html>
 
-<head>
-	
-    <title>Masthead Demo</title>
+	<head>
 
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="cleartype" content="on">
+		<title>navdrawer</title>
 
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/demo-pages.css">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="cleartype" content="on">
 
-    <script src="js/blocks-loader-2.2.3.min.js"></script>
-    <script src="js/jquery.tap.js"></script>
-    
-  	<link rel="stylesheet" href="css/masthead.css">
-  	<link rel="stylesheet" href="css/header-treenav.css">
- 
- </head>
-  
- <body>
- 	
-    <section class="pages active"><article class="page active currentpage">
-    	<section class="viewport">
-    		
-    		<header title="Satellite Navigation Responsive Masthead" id="fw-banner" data-component="masthead" data-variation="satellite-custom" class="menu-label globalheader blank-restructured satellite">
-    			
-	    			<div class="actions-left">
-	    				<div class="menubutton box-shadow-menu"><a href="#"><span>Menu</span></a>
-	    					
-	    				</div>
-	    			</div>
-    			
-    				<div class="header_container">
-    				
-    					<div class="inner">
-    					
-	    					<div class="home-icon home-icon-interactive"><a href="index.html"><img src="img/cisco-logo-blue.png" alt="Cisco" class=""></a>
-	    						
-	    						<div class="home-options">
-	    							<ul>
-	    								<li><a href="#link">Cisco Learning Network Home</a></li>
-	    								<li class="divider"></li>
-	    								<li><a href="#link">All of Cisco</a></li>
-	    							</ul>
-	    						</div>
-	    						
-	    					</div>
-    					
-    						<h1>Cisco Learning Network</h1>
-    					
-    						<nav id="fw-utility" class="fw-utility">
-	    						<ul id="actions" class="actions guest-actions">
-	    							<li><a href="#">Help</a></li>
-	    							<li><a href="#">Partners</a></li>
-	    							<li class="no-pipe"><a class="ft-label" href="#">Support</a></li>
-	    						</ul>
-    						</nav>
-    					
-    					</div>
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<!--<script src="js/navdrawer.js"></script>-->
+		
+		
+		
+		
+		<link rel="stylesheet" href="css/navdrawer.css">
 
-    				</div>
-    			
-    			
-    				<div class="module_container clearfix">
-    				
-    					<div class="inner">
-    					
-	    					<nav class="primarynavigation satellite">
-	    						
-	    						<table>
-	    							<tbody>
-	    								<tr>
-	    									<td data-menu="" class="navitem current"><a href="#">Malesuada Elit</a></td>
-	    									<td data-menu="" class="navitem"><a href="#">Dignissim</a></td>
-	    									<td data-menu="" class="navitem"><a href="#">Aliquam &amp; Interdum</a></td>
-	    									<td data-menu="" class="navitem"><a href="#">Nulla Blandit Mauris</a></td>
-	    									<td data-menu="" class="navitem"><a href="#">Vestibulum</a></td>
-	    								</tr>
-	    							</tbody>
-	    						</table>
-	    					</nav>      	
-        	
-        				</div>       	
-        	
-        	   		</div>
-        
-        			<header title="Framework Treenav" class="pageheader production-copy" data-component="header-treenav" data-variation="satellite-navigation">
-        	
-	        			<nav id="fw-treenav" class="overthrow open fw-treenav">
-	        				
-	        				<ul class="tn-language">
-	        					<li class="no-pipe"><a href="#">Help</a></li>
-	        					<li class="no-pipe"><a href="#">Partners</a></li>
-	        					<li class="no-pipe"><a href="#">Support</a></li>
-	        				</ul>
-	        	
-	        	
-		        			<ul class="treenav-primary">		
-		        				<li><span><a class="minwidth-medium" href="#">Home</a></span></li>
-		        				<li><span><a class="minwidth-medium" href="#">Speakers</a></span></li>
-		        				<li><span><a class="minwidth-medium" href="#">Venue &amp; Travel</a></span></li>
-		        				<li><span><a class="minwidth-medium" href="#">Program</a></span></li>
-		        				<li><span><a class="minwidth-medium" href="#">Registration</a></span></li>
-		        			</ul>
-	        			</nav>
-	        			
-	        		</header>
-	        	</header>
-	        
-			    <div id="fw-content" class="fw-content">
-			    	<div class="l-container" style="margin-bottom:300px;">
-			            <h1 class="pagetitle">Satellite Custom</h1>
-			        </div>
-			    </div>
-	
-	        	<div class="fader">&nbsp;</div>
-	        		
-	    	</section>
-		</article>
-	</section>
-  
+	</head>
 
-</body>
+	<body>
+		<section id="header_section">
+			<header title="Responsive Navigation Drawer" id="banner" class="header_label">
+
+				<div class="primarynav_container">
+
+					<nav class="primarynav">
+
+						<div id="primarynav_outer">
+							<ul class="navmenu">
+								<li><a id="navmenu-1" href="#">Menu Item</a></li>
+								<li><a id="navmenu-2" href="#">Menu Item</a></li>
+								<li><a id="navmenu-3" href="#">Menu Item</a></li>
+								<li><a id="navmenu-4" href="#">Menu Item</a></li>
+							</ul>
+						</div>
+
+						<div id="navdrawer" class="hidden">
+							<div id="navcol-1" class="navcolumn hidden">
+								<h2>Col 1</h2>
+								<ul class="navlist">
+									<li><a href="#">hidden menu item</a></li>
+									<li><a href="#">hidden menu item</a></li>
+									<li><a href="#">hidden menu item</a></li>
+									<li><a href="#">hidden menu item</a></li>
+									<li><a href="#">hidden menu item</a></li>
+								</ul>
+							</div>
+							<div id="navcol-2" class="navcolumn hidden">
+								<h2>Col 2</h2>
+								<ul class="navlist">
+									<li><a href="#">hidden menu item</a></li>
+									<li><a href="#">hidden menu item</a></li>
+									<li><a href="#">hidden menu item</a></li>
+									<li><a href="#">hidden menu item</a></li>
+									<li><a href="#">hidden menu item</a></li>
+								</ul>
+							</div>
+							<div id="navcol-3" class="navcolumn hidden">
+								<h2>Col 3</h2>
+								<ul class="navlist">
+									<li><a href="#">hidden menu item</a></li>
+									<li><a href="#">hidden menu item</a></li>
+									<li><a href="#">hidden menu item</a></li>
+									<li><a href="#">hidden menu item</a></li>
+									<li><a href="#">hidden menu item</a></li>
+								</ul>
+							</div>
+							<div id="navcol-4" class="navcolumn hidden">
+								<h2>Col 4</h2>
+								<ul class="navlist">
+									<li><a href="#">hidden menu item</a></li>
+									<li><a href="#">hidden menu item</a></li>
+									<li><a href="#">hidden menu item</a></li>
+									<li><a href="#">hidden menu item</a></li>
+									<li><a href="#">hidden menu item</a></li>
+								</ul>
+							</div>
+						</div><!-- #end navdrawer -->
+						
+					</nav>
+
+				</div> <!-- end .header_container -->
+
+			</header> <!-- end header -->
+		</section> <!-- end section -->
+		
+		<section id="content_section">
+			<main role="main">
+				
+				<div id="content" class="content">
+					
+					<div class="container">
+						
+						<h1 class="pagetitle">Content Title</h1>
+						
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. </p>
+						<p>Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+						<p>Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. </p>
+					</div><!-- end .container -->
+					
+				</div><!-- end #content -->
+
+			</main>
+		</section><!-- end section -->
+		
+		<script type="text/javascript" src="js/navdrawer.js"></script>
+		
+	</body>
 </html>
